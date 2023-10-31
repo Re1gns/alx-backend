@@ -8,6 +8,7 @@ from flask import (
     request
 )
 from flask_babel import Babel
+from typing import Union
 
 
 class Config(object):
@@ -25,7 +26,7 @@ babel = Babel(app)
 
 
 @babel.localeselector
-def get_locale():
+def get_locale(): -> Union[str, None]
     """
     Select and return best language match based on supported languages
     """
