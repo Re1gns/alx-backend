@@ -2,18 +2,17 @@
 """
 Flask app
 """
-from flask import Flask, render_template
+from flask import (
+    Flask,
+    render_template,
+    request
+)
 from flask_babel import Babel
 
 
 class Config(object):
     """
-    Configuration for the Flask app and Babel.
-
-    Attributes:
-        LANGUAGES (list): A list of supported languages.
-        BABEL_DEFAULT_LOCALE (str): The default locale for Babel.
-        BABEL_DEFAULT_TIMEZONE (str): The default timezone for Babel.
+    Configuration for Babel
     """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
@@ -25,15 +24,20 @@ app.config.from_object(Config)
 babel = Babel(app)
 
 
+@babel.localeselector
+def get_locale():
+    """
+    Select and return best language match based on supported languages
+    """
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+
+
 @app.route('/', strict_slashes=False)
 def index() -> str:
     """
-    Render the index page.
-
-    Returns:
-        str: The rendered HTML page as a string.
+    Handles / route
     """
-    return render_template('1-index.html')
+    return render_template('2-index.html')
 
 
 if __name__ == "__main__":
