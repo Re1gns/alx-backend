@@ -2,7 +2,7 @@
 # Copyright (C) 2023 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
+
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
@@ -24,7 +24,7 @@ msgstr "Welcome to Holberton"
 
 #: templates/3-index.html:9 templates/index.html:9
 msgid "home_header"
-msgstr "Hello world"
+msgstr "Hello world!"
 
 #: templates/index.html:11
 msgid "logged_in_as"
@@ -37,13 +37,3 @@ msgstr ""
 #: templates/index.html:16
 msgid "current_time_is"
 msgstr ""
-
-msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-
-msgid "home_title"
-msgstr "Welcome to Holberton"
-
-msgid "home_header"
-msgstr "Hello world!"
