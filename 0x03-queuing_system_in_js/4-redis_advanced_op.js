@@ -10,7 +10,7 @@ redisClient.on('error', function(error) {
   console.log(`Redis client not connected to the server: ${error}`);
 });
 
-//set hash key-value in HolbertonSchools list
+//set the hash key-value in HolbertonSchools list
 redisClient.hset('HolbertonSchools', 'Portland', '50', print);
 redisClient.hset('HolbertonSchools', 'Seattle', '80', print);
 redisClient.hset('HolbertonSchools', 'New York', '20', print);

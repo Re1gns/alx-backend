@@ -3,7 +3,7 @@ import { createQueue } from 'kue';
 import { promisify } from 'util';
 import express from 'express';
 
-//create redis client
+//creating redis client
 const redisClient = createClient();
 
 redisClient.on('connect', function() {
